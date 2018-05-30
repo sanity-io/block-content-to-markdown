@@ -2,6 +2,8 @@
 
 Render an array of [block text](https://www.sanity.io/docs/schema-types/block-type) from Sanity to markdown.
 
+**Note**: Currently in beta - please leave us feedback :)
+
 ## Installing
 
 ```
