@@ -1,7 +1,7 @@
 {
   "name": "@sanity/block-content-to-markdown",
   "description": "Transforming Sanity block content to markdown",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "lib/toMarkdown.js",
   "scripts": {
     "build": "npm run clean && npm run compile",
@@ -43,6 +43,8 @@
   "homepage": "https://github.com/sanity-io/block-content-to-markdown#readme",
   "jest": {
     "testEnvironment": "node",
-    "collectCoverageFrom": ["src/**/*.js"]
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ]
   }
 }
