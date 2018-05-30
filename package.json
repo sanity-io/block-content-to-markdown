@@ -1,7 +1,7 @@
 {
   "name": "@sanity/block-content-to-markdown",
   "description": "Transforming Sanity block content to markdown",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "main": "lib/toMarkdown.js",
   "scripts": {
     "build": "npm run clean && npm run compile",
