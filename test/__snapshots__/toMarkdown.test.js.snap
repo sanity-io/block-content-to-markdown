@@ -1,0 +1,327 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`001-empty-block 1`] = `""`;
+
+exports[`002-single-span 1`] = `"Plain text."`;
+
+exports[`003-multiple-spans 1`] = `"Span number one. And span number two."`;
+
+exports[`004-basic-mark-single-span 1`] = `"\`sanity\` is the name of the CLI tool."`;
+
+exports[`005-basic-mark-multiple-adjacent-spans 1`] = `"**A word of warning;** Sanity is addictive."`;
+
+exports[`006-basic-mark-nested-marks 1`] = `"**A word of _warning;_** Sanity is addictive."`;
+
+exports[`007-link-mark-def 1`] = `"A word of warning; [Sanity](https://sanity.io/) is addictive."`;
+
+exports[`008-plain-header-block 1`] = `"## Dat heading"`;
+
+exports[`009-messy-link-text 1`] = `"> [Sanity](https://sanity.io/) can be used to power almost any [_**app** or website_](https://sanity.io/)."`;
+
+exports[`010-basic-bullet-list 1`] = `
+"Let's test some of these lists!
+
+* Bullet 1
+* Bullet 2
+* Bullet 3"
+`;
+
+exports[`011-basic-numbered-list 1`] = `
+"Let's test some of these lists!
+
+1. Number 1
+2. Number 2
+3. Number 3"
+`;
+
+exports[`012-image-support 1`] = `
+"Also, images are pretty common.
+
+![](https://cdn.sanity.io/images/3do82whm/production/YiOKD0O6AdjKPaK24WtbOEv0-3456x2304.jpg)"
+`;
+
+exports[`013-materialized-image-support 1`] = `
+"Also, images are pretty common.
+
+![](https://cdn.sanity.io/images/3do82whm/production/caC3MscJLd3mNAbMdQ6-5748x3832.jpg)"
+`;
+
+exports[`014-nested-lists 1`] = `
+"Span
+
+* Item 1, level 1
+* Item 2, level 1
+  1. Item 3, level 2
+      1. Item 4, level 3
+  2. Item 5, level 2
+  3. Item 6, level 2
+* Item 7, level 1
+* Item 8, level 1
+
+1. Item 1 of list 2
+2. Item 2 of list 2
+  1. Item 3 of list 2, level 2
+
+Just a block"
+`;
+
+exports[`015-all-basic-marks 1`] = `"\`code\`**strong**_em_underline~~strike-through~~[link](https://www.sanity.io/)"`;
+
+exports[`016-deep-weird-lists 1`] = `
+"* Item a
+* Item b
+
+1. Item 1
+2. Item 2
+  1. Item 2, a
+  2. Item 2, b
+3. Item 3
+
+
+
+* In
+  * Out
+* In
+  * Out
+      * Even More
+          * Even deeper
+  * Two steps back
+* All the way back
+    * Skip a step
+
+1. New list
+  1. Next level
+
+* New bullet list"
+`;
+
+exports[`017-all-default-block-styles 1`] = `
+"# Sanity
+
+## The outline
+
+### More narrow details
+
+#### Even less thing
+
+##### Small header
+
+###### Lowest thing
+
+> A block quote of awesomeness
+
+Plain old normal block
+
+Default to \\"normal\\" style"
+`;
+
+exports[`018-marks-all-the-way-down 1`] = `"<span style=\\"border: 1px solid;\\"><span style=\\"border: 3px solid;\\">_Sanity FTW_</span></span>"`;
+
+exports[`019-keyless 1`] = `
+"sanity is a full time job
+
+in a world that is always changing"
+`;
+
+exports[`020-empty-array 1`] = `""`;
+
+exports[`021-list-without-level 1`] = `
+"## In-person access: Research appointments
+
+The collection may be examined by arranging a research appointment **in advance** by contacting the ACT archivist by email or phone. ACT generally does not accept walk-in research patrons, although requests may be made in person at the Archivist’s office (E15-222). ACT recommends arranging appointments at least three weeks in advance in order to ensure availability. ACT reserves the right to cancel research appointments at any time. Appointment scheduling is subject to institute holidays and closings. 
+
+The collection space is located at:  
+20 Ames Street  
+Building E15-235  
+Cambridge, Massachusetts 02139
+
+## In-person access: Space policies
+
+* The Archivist or an authorized ACT staff member must attend researchers at all times.
+* No pens, markers, or adhesives (e.g. “Post-it” notes) are permitted in the collection space; pencils will be provided upon request.
+* Cotton gloves must be worn when handling collection materials; gloves will be provided by the Archivist.
+* No food or beverages are permitted in the collection space.
+* Laptop use is permitted in the collection space, as well as digital cameras and cellphones. Unless otherwise authorized, any equipment in the collection space (including but not limited to computers, telephones, scanners, and viewing equipment) is for use by ACT staff members only.
+* Photocopying machines in the ACT hallway will be accessible by patrons under the supervision of the Archivist.
+* Patrons may only browse materials that have been made available for access.
+
+## Remote access: Reference requests
+
+For patrons who are unable to arrange for an on-campus visit to the Archives and Special Collections, reference questions may be directed to the Archivist remotely by email or phone. Generally, emails and phone calls will receive a response within 72 hours of receipt. Requests are typically filled in the order they are received.
+
+## **Use of patron information**
+
+Patrons requesting collection materials in person or remotely may be asked to provide certain information to the Archivist, such as contact information and topic(s) of research. This information is only used to track requests for statistical evaluations of collection use and will not be disclosed to outside organizations for any purpose. ACT will endeavor to protect the privacy of all patrons accessing collections.
+
+## **Fees**
+
+ACT reserves the right to charge an hourly rate for requests that require more than three hours of research on behalf of a patron (remote requests). Collection materials may be scanned and made available upon request, but digitization of certain materials may incur costs. Additionally, requests to publish, exhibit, or otherwise reproduce and display collection materials may incur use fees.
+
+## **Use of MIT-owned materials by patrons**
+
+Permission to examine collection materials in person or remotely (by receiving transfers of digitized materials) does not imply or grant permission to publish or exhibit those materials. Permission to publish, exhibit, or otherwise use collection materials is granted on a case by case basis in accordance with MIT policy, restrictions that may have been placed on materials by donors or depositors, and copyright law. To request permission to publish, exhibit, or otherwise use collection materials, contact the Archivist. **When permission is granted by MIT, patrons must comply with all guidelines provided by ACT for citations, credits, and copyright statements. Exclusive rights to examine or publish material will not be granted.**"
+`;
+
+exports[`022-inline-nodes 1`] = `
+"Also, images are pretty common: ![](https://cdn.sanity.io/images/3do82whm/production/YiOKD0O6AdjKPaK24WtbOEv0-3456x2304.jpg) - as you can see, they can also appear inline!
+
+Sibling paragraph"
+`;
+
+exports[`023-hard-breaks 1`] = `
+"A paragraph  
+can have hard  
+  
+breaks."
+`;
+
+exports[`024-inline-images 1`] = `
+"\`Foo! Bar!\`![](https://cdn.sanity.io/images/3do82whm/production/magnificent_beastZ8Z5qZHHxgrTJf6Hhz-162x120.png)Neat
+
+\`Foo! Bar! \`![](https://cdn.sanity.io/images/3do82whm/production/magnificent_beastZ8Z5qZHHxgrTJf6Hhz-162x120.png)\` Baz!\`
+
+Foo! Bar! ![](https://cdn.sanity.io/images/3do82whm/production/magnificent_beastZ8Z5qZHHxgrTJf6Hhz-162x120.png)\` Baz!\`"
+`;
+
+exports[`050-custom-block-type 1`] = `
+"\`\`\`javascript
+const foo = require('foo')
+
+foo('hi there', (err, thing) => {
+  console.log(err)
+})
+
+\`\`\`"
+`;
+
+exports[`051-override-defaults 1`] = `"![](https://cdn.sanity.io/images/3do82whm/production/YiOKD0O6AdjKPaK24WtbOEv0-3456x2304.jpg)"`;
+
+exports[`052-custom-marks 1`] = `"<span style=\\"border: 5px solid;\\">Sanity</span>"`;
+
+exports[`053-override-default-marks 1`] = `"[Sanity](https://sanity.io)"`;
+
+exports[`060-list-issue 1`] = `
+"## Lorem ipsum
+
+Lorem ipsum
+
+1. Lorem ipsum
+2. Lorem ipsum
+3. Lorem ipsum
+4. Lorem ipsum
+5. Lorem ipsum
+6. Lorem ipsum
+7. Lorem ipsum
+8. Lorem ipsum
+9. Lorem ipsum
+10. Lorem ipsum
+
+## Lorem ipsum
+
+Lorem ipsum
+
+Lorem ipsum
+
+Lorem ipsum
+
+## Lorem ipsum
+
+Lorem ipsum[Lorem ipsum](https://example.com)Lorem ipsum[Lorem ipsum](https://example.com)Lorem ipsum[Lorem ipsum](https://example.com)Lorem ipsum
+
+### Lorem ipsum
+
+* Lorem ipsum
+* Lorem ipsum
+* Lorem ipsum
+
+### Lorem ipsum
+
+* Lorem ipsum
+* Lorem ipsum
+* Lorem ipsum
+* Lorem ipsum
+* Lorem ipsum
+* Lorem ipsum
+
+### Lorem ipsum
+
+* Lorem ipsum
+* Lorem ipsum
+* Lorem ipsum_Lorem ipsum_Lorem ipsum
+
+### Lorem ipsum
+
+* Lorem ipsum
+* Lorem ipsum
+* Lorem ipsum
+* Lorem ipsum
+
+### Lorem ipsum
+
+* Lorem ipsum
+* Lorem ipsum
+
+### Lorem ipsum
+
+* Lorem ipsum
+* Lorem ipsum
+
+### Lorem ipsum
+
+* Lorem ipsum
+* Lorem ipsum
+  * Lorem ipsum
+  * Lorem ipsum
+  * Lorem ipsum
+  * Lorem ipsum
+* Lorem ipsum
+  * Lorem ipsum
+  * Lorem ipsum
+  * Lorem ipsum
+  * Lorem ipsum
+  * Lorem ipsum
+  * Lorem ipsum
+  * Lorem ipsum
+
+## Lorem ipsum
+
+Lorem ipsum
+
+Lorem ipsum_Lorem ipsum_
+
+## Lorem ipsum
+
+Lorem ipsum
+
+Lorem ipsum
+
+## Lorem ipsum
+
+Lorem ipsum
+
+1. Lorem ipsum
+2. Lorem ipsum
+3. Lorem ipsum
+4. Lorem ipsum
+5. Lorem ipsum
+
+Lorem ipsum
+
+## Lorem ipsum
+
+Lorem ipsum
+
+* Lorem ipsum[Lorem ipsum](https://example.com)Lorem ipsum
+* Lorem ipsum[Lorem ipsum](https://example.com)Lorem ipsum
+* Lorem ipsum[Lorem ipsum](https://example.com)Lorem ipsum
+* Lorem ipsum[Lorem ipsum](https://example.com)Lorem ipsum
+* Lorem ipsum[Lorem ipsum](https://example.com)Lorem ipsum
+* Lorem ipsum[Lorem ipsum](https://example.com)Lorem ipsum
+* Lorem ipsum[Lorem ipsum](https://example.com)Lorem ipsum
+
+## Lorem ipsum
+
+Lorem ipsum"
+`;
+
+exports[`061-missing-mark-serializer 1`] = `"A word of _warning;_ Sanity is addictive."`;

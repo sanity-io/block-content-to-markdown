@@ -1,0 +1,48 @@
+{
+  "name": "@sanity/block-content-to-markdown",
+  "description": "Transforming Sanity block content to markdown",
+  "version": "1.0.0",
+  "main": "lib/toMarkdown.js",
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "watch": "npm run compile -- --watch",
+    "clean": "rimraf lib coverage .nyc_output",
+    "compile": "babel --source-maps --copy-files -d lib/ src/",
+    "coverage": "npm test -- --coverage",
+    "postpublish": "npm run clean",
+    "posttest": "eslint .",
+    "prepublishOnly": "npm run build",
+    "test": "NODE_ENV=test jest"
+  },
+  "keywords": [],
+  "author": "Sanity <hello@sanity.io>",
+  "license": "MIT",
+  "dependencies": {
+    "@sanity/block-content-to-hyperscript": "^1.3.3"
+  },
+  "devDependencies": {
+    "@sanity/block-content-tests": "^0.0.9",
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^4.19.0",
+    "eslint-config-prettier": "^2.4.0",
+    "eslint-config-sanity": "^4.0.2",
+    "eslint-plugin-import": "^2.12.0",
+    "jest": "^23.0.1",
+    "prettier": "^1.13.2",
+    "rimraf": "^2.6.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanity-io/block-content-to-markdown.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sanity-io/block-content-to-markdown/issues"
+  },
+  "homepage": "https://github.com/sanity-io/block-content-to-markdown#readme",
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": ["src/**/*.js"]
+  }
+}
