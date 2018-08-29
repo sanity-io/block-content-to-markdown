@@ -183,6 +183,20 @@ exports[`024-inline-images 1`] = `
 Foo! Bar! ![](https://cdn.sanity.io/images/3do82whm/production/magnificent_beastZ8Z5qZHHxgrTJf6Hhz-162x120.png)\` Baz!\`"
 `;
 
+exports[`025-image-with-hotspot 1`] = `
+"Also, images are pretty common.
+
+![](https://cdn.sanity.io/images/3do82whm/production/c2f0fc30003e6d7c79dcb5338a9b3d297cab4a8a-2000x1333.jpg?rect=468,128,1084,1077)"
+`;
+
+exports[`027-styled-list-items 1`] = `
+"Let's test some of these lists!
+
+* Bullet 1
+* Bullet 2
+* Bullet 3"
+`;
+
 exports[`050-custom-block-type 1`] = `
 "\`\`\`javascript
 const foo = require('foo')
