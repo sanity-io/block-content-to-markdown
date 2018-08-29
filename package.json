@@ -7,7 +7,7 @@
   "unpkg": "umd/toMarkdown.min.js",
   "scripts": {
     "build": "npm run clean && npm run compile && npm run browserify && npm run minify",
-    "browserify": "NODE_ENV=production BROWSERIFY_ENV=build DEBUG='' browserify -t envify ./index.js -o umd/toMarkdown.js --standalone=SanityBlockContentToMarkdown",
+    "browserify": "NODE_ENV=production BROWSERIFY_ENV=build DEBUG='' browserify -t envify -g uglifyify ./index.js -o umd/toMarkdown.js --standalone=SanityBlockContentToMarkdown",
     "watch": "npm run compile -- --watch",
     "clean": "rimraf lib coverage .nyc_output",
     "compile": "babel --source-maps --copy-files -d lib/ src/",
