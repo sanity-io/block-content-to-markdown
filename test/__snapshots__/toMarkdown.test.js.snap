@@ -339,3 +339,11 @@ Lorem ipsum"
 `;
 
 exports[`061-missing-mark-serializer 1`] = `"A word of _warning;_ Sanity is addictive."`;
+
+exports[`places code symbols appropriately with respect to whitespace 1`] = `"\`   Sanity   \`"`;
+
+exports[`places em symbols appropriately with respect to whitespace 1`] = `"_   Sanity   _"`;
+
+exports[`places strike-through symbols appropriately with respect to whitespace 1`] = `"~~   Sanity   ~~"`;
+
+exports[`places strong symbols appropriately with respect to whitespace 1`] = `"**   Sanity   **"`;

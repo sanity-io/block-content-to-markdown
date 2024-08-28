@@ -42,3 +42,25 @@ test('builds images with passed query params', () => {
   const result = toMarkdown(input, {imageOptions: {w: 320, h: 240}})
   expect(result).toContain('5748x3832.jpg?w=320&h=240')
 })
+
+function getMarkedInput(mark) {
+  return [
+    {
+      _type: 'block',
+      children: [
+        {
+          _type: 'span',
+          marks: [mark],
+          text: '   Sanity   ',
+        },
+      ],
+      markDefs: [],
+    },
+  ]
+}
+
+;['strike-through', 'em', 'code', 'strong'].forEach((mark) => {
+  test(`places ${mark} symbols appropriately with respect to whitespace`, () => {
+    expect(toMarkdown(getMarkedInput(mark), options)).toMatchSnapshot()
+  })
+})
