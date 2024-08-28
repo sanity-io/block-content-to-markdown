@@ -2,7 +2,7 @@ const {
   getImageUrl,
   getSerializers,
   blocksToNodes,
-  mergeSerializers
+  mergeSerializers,
 } = require('@sanity/block-content-to-hyperscript/internals')
 
 const mdSerializers = require('./serializers')

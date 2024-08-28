@@ -19,8 +19,21 @@ function block(props) {
   return renderChildren(props)
 }
 
-function RawMarkSerializer(char, props) {
-  return `${char}${renderChildren(props)}${char}`
+function RawMarkSerializer(char, padWhitespace, props) {
+  const children = renderChildren(props)
+
+  if (padWhitespace) {
+    const startContent = children.search(/\S/)
+    const endContent = children.search(/\S(?=\s*$)/)
+
+    const start = startContent == -1 ? '' : children.substring(0, startContent)
+    const end = endContent == -1 ? '' : children.substring(endContent + 1)
+    const content = children.substring(startContent, endContent + 1)
+
+    return `${start}${char}${content}${char}${end}`
+  }
+
+  return `${char}${children}${char}`
 }
 
 function link(props) {
@@ -58,21 +71,21 @@ function hardBreak() {
 module.exports = {
   types: {
     block,
-    image
+    image,
   },
 
   marks: {
-    'strike-through': RawMarkSerializer.bind(null, '~~'),
-    em: RawMarkSerializer.bind(null, '_'),
-    code: RawMarkSerializer.bind(null, '`'),
-    strong: RawMarkSerializer.bind(null, '**'),
+    'strike-through': RawMarkSerializer.bind(null, '~~', true),
+    em: RawMarkSerializer.bind(null, '_', true),
+    code: RawMarkSerializer.bind(null, '`', false),
+    strong: RawMarkSerializer.bind(null, '**', true),
     underline: renderChildren,
-    link
+    link,
   },
 
   list,
   listItem,
   container,
   hardBreak,
-  markFallback: renderChildren
+  markFallback: renderChildren,
 }
