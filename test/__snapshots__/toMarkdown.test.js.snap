@@ -340,6 +340,46 @@ Lorem ipsum"
 
 exports[`061-missing-mark-serializer 1`] = `"A word of _warning;_ Sanity is addictive."`;
 
+exports[`after sanitiziation - allows empty code marks between em marks 1`] = `"_before_\`\`_after_"`;
+
+exports[`after sanitiziation - allows empty code marks between em marks 2`] = `"_before\`\`after_"`;
+
+exports[`after sanitiziation - allows empty code marks between em marks 3`] = `"_before_**\`\`**_after_"`;
+
+exports[`after sanitiziation - allows empty code marks between em marks 4`] = `"_before_\`\`_after_"`;
+
+exports[`after sanitiziation - allows empty code marks between strike-through marks 1`] = `"~~before\`\`after~~"`;
+
+exports[`after sanitiziation - allows empty code marks between strike-through marks 2`] = `"~~before~~_\`\`_~~after~~"`;
+
+exports[`after sanitiziation - allows empty code marks between strike-through marks 3`] = `"~~before~~**\`\`**~~after~~"`;
+
+exports[`after sanitiziation - allows empty code marks between strike-through marks 4`] = `"~~before~~\`\`~~after~~"`;
+
+exports[`after sanitiziation - allows empty code marks between strong marks 1`] = `"**before**\`\`**after**"`;
+
+exports[`after sanitiziation - allows empty code marks between strong marks 2`] = `"**before**_\`\`_**after**"`;
+
+exports[`after sanitiziation - allows empty code marks between strong marks 3`] = `"**before\`\`after**"`;
+
+exports[`after sanitiziation - allows empty code marks between strong marks 4`] = `"**before**\`\`**after**"`;
+
+exports[`after sanitiziation - allows empty code marks between underline marks 1`] = `"before\`\`after"`;
+
+exports[`after sanitiziation - allows empty code marks between underline marks 2`] = `"before_\`\`_after"`;
+
+exports[`after sanitiziation - allows empty code marks between underline marks 3`] = `"before**\`\`**after"`;
+
+exports[`after sanitiziation - allows empty code marks between underline marks 4`] = `"before\`\`after"`;
+
+exports[`allows empty code marks between em marks 1`] = `"_before_\`\`_after_"`;
+
+exports[`allows empty code marks between strike-through marks 1`] = `"~~before~~\`\`~~after~~"`;
+
+exports[`allows empty code marks between strong marks 1`] = `"**before**\`\`**after**"`;
+
+exports[`allows empty code marks between underline marks 1`] = `"before\`\`after"`;
+
 exports[`does not include em symbols around empty content 1`] = `"before after"`;
 
 exports[`does not include strike-through symbols around empty content 1`] = `"before after"`;
@@ -355,3 +395,35 @@ exports[`places nested marks appropriately with respect to whitespace 1`] = `"~~
 exports[`places strike-through symbols appropriately with respect to whitespace 1`] = `"before   ~~Sanity~~   after"`;
 
 exports[`places strong symbols appropriately with respect to whitespace 1`] = `"before   **Sanity**   after"`;
+
+exports[`sanitizes empty em blocks to prevent malformed code syntax 1`] = `"\`before\`\`after\`"`;
+
+exports[`sanitizes empty em blocks to prevent malformed em syntax 1`] = `"_beforeafter_"`;
+
+exports[`sanitizes empty em blocks to prevent malformed strike-through syntax 1`] = `"~~before~~~~after~~"`;
+
+exports[`sanitizes empty em blocks to prevent malformed strong syntax 1`] = `"**before****after**"`;
+
+exports[`sanitizes empty strike-through blocks to prevent malformed code syntax 1`] = `"\`before\`\`after\`"`;
+
+exports[`sanitizes empty strike-through blocks to prevent malformed em syntax 1`] = `"_before__after_"`;
+
+exports[`sanitizes empty strike-through blocks to prevent malformed strike-through syntax 1`] = `"~~beforeafter~~"`;
+
+exports[`sanitizes empty strike-through blocks to prevent malformed strong syntax 1`] = `"**before****after**"`;
+
+exports[`sanitizes empty strong blocks to prevent malformed code syntax 1`] = `"\`before\`\`after\`"`;
+
+exports[`sanitizes empty strong blocks to prevent malformed em syntax 1`] = `"_before__after_"`;
+
+exports[`sanitizes empty strong blocks to prevent malformed strike-through syntax 1`] = `"~~before~~~~after~~"`;
+
+exports[`sanitizes empty strong blocks to prevent malformed strong syntax 1`] = `"**beforeafter**"`;
+
+exports[`sanitizes empty underline blocks to prevent malformed code syntax 1`] = `"\`before\`\`after\`"`;
+
+exports[`sanitizes empty underline blocks to prevent malformed em syntax 1`] = `"_before__after_"`;
+
+exports[`sanitizes empty underline blocks to prevent malformed strike-through syntax 1`] = `"~~before~~~~after~~"`;
+
+exports[`sanitizes empty underline blocks to prevent malformed strong syntax 1`] = `"**before****after**"`;
