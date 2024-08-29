@@ -26,8 +26,13 @@ function RawMarkSerializer(char, padWhitespace, props) {
     const startContent = children.search(/\S/)
     const endContent = children.search(/\S(?=\s*$)/)
 
-    const start = startContent == -1 ? '' : children.substring(0, startContent)
-    const end = endContent == -1 ? '' : children.substring(endContent + 1)
+    if (endContent == -1 || startContent == -1) {
+      return children
+    }
+
+    const start = children.substring(0, startContent)
+    const end = children.substring(endContent + 1)
+
     const content = children.substring(startContent, endContent + 1)
 
     return `${start}${char}${content}${char}${end}`

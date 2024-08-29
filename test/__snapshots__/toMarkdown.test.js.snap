@@ -340,12 +340,18 @@ Lorem ipsum"
 
 exports[`061-missing-mark-serializer 1`] = `"A word of _warning;_ Sanity is addictive."`;
 
-exports[`places code symbols appropriately with respect to whitespace 1`] = `"\`   Sanity   \`"`;
+exports[`does not include em symbols around empty content 1`] = `"before after"`;
 
-exports[`places em symbols appropriately with respect to whitespace 1`] = `"_Sanity_"`;
+exports[`does not include strike-through symbols around empty content 1`] = `"before after"`;
+
+exports[`does not include strong symbols around empty content 1`] = `"before after"`;
+
+exports[`places code symbols appropriately with respect to whitespace 1`] = `"before\`   Sanity   \`after"`;
+
+exports[`places em symbols appropriately with respect to whitespace 1`] = `"before   _Sanity_   after"`;
 
 exports[`places nested marks appropriately with respect to whitespace 1`] = `"~~before   **_Sanity_**~~   after"`;
 
-exports[`places strike-through symbols appropriately with respect to whitespace 1`] = `"~~Sanity~~"`;
+exports[`places strike-through symbols appropriately with respect to whitespace 1`] = `"before   ~~Sanity~~   after"`;
 
-exports[`places strong symbols appropriately with respect to whitespace 1`] = `"**Sanity**"`;
+exports[`places strong symbols appropriately with respect to whitespace 1`] = `"before   **Sanity**   after"`;

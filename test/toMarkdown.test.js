@@ -43,15 +43,25 @@ test('builds images with passed query params', () => {
   expect(result).toContain('5748x3832.jpg?w=320&h=240')
 })
 
-function getMarkedInput(mark) {
+function getMarkedInput(mark, text = '   Sanity   ') {
   return [
     {
       _type: 'block',
       children: [
         {
           _type: 'span',
+          marks: [],
+          text: 'before',
+        },
+        {
+          _type: 'span',
           marks: [mark],
-          text: '   Sanity   ',
+          text: text,
+        },
+        {
+          _type: 'span',
+          marks: [],
+          text: 'after',
         },
       ],
       markDefs: [],
@@ -62,6 +72,11 @@ function getMarkedInput(mark) {
 ;['strike-through', 'em', 'code', 'strong'].forEach((mark) => {
   test(`places ${mark} symbols appropriately with respect to whitespace`, () => {
     expect(toMarkdown(getMarkedInput(mark), options)).toMatchSnapshot()
+  })
+})
+;['strike-through', 'em', 'strong'].forEach((mark) => {
+  it(`does not include ${mark} symbols around empty content`, () => {
+    expect(toMarkdown(getMarkedInput(mark, ' '))).toMatchSnapshot()
   })
 })
 
