@@ -2,7 +2,7 @@ const {
   getImageUrl,
   getSerializers,
   blocksToNodes,
-  mergeSerializers,
+  mergeSerializers
 } = require('@sanity/block-content-to-hyperscript/internals')
 
 const mdSerializers = require('./serializers')
@@ -10,7 +10,7 @@ const mdSerializers = require('./serializers')
 const disallowedEmptyMarks = ['strike-through', 'em', 'strong', 'underline']
 
 const sanitizeEmptyMarkedSpans = (blocks = []) => {
-  const sanitizedBlock = (block) => {
+  const sanitizedBlock = block => {
     if (block._type === 'block' && Array.isArray(block.children)) {
       const newBlock = Object.assign({}, block)
 
@@ -20,7 +20,7 @@ const sanitizeEmptyMarkedSpans = (blocks = []) => {
     }
 
     if (block._type === 'span' && block.text.length == 0 && Array.isArray(block.marks)) {
-      const allowedEmptyMarks = block.marks.filter((mark) => {
+      const allowedEmptyMarks = block.marks.filter(mark => {
         return !disallowedEmptyMarks.includes(mark)
       })
 
@@ -28,7 +28,7 @@ const sanitizeEmptyMarkedSpans = (blocks = []) => {
         return null
       } else {
         return Object.assign({}, block, {
-          marks: allowedEmptyMarks,
+          marks: allowedEmptyMarks
         })
       }
     }
@@ -37,7 +37,7 @@ const sanitizeEmptyMarkedSpans = (blocks = []) => {
   }
 
   return Array.isArray(blocks)
-    ? blocks.map(sanitizedBlock).filter((block) => !!block)
+    ? blocks.map(sanitizedBlock).filter(block => !!block)
     : sanitizedBlock(blocks)
 }
 

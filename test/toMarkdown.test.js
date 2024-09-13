@@ -15,7 +15,7 @@ test('renders empty block array as empty string', () => {
   expect(toMarkdown([])).toEqual('')
 })
 
-const code = (props) => `\`\`\`${props.node.language}\n${props.node.code}\n\`\`\``
+const code = props => `\`\`\`${props.node.language}\n${props.node.code}\n\`\`\``
 const highlight = ({mark, children}) => {
   const content = Array.isArray(children) ? children.join('') : children
   return `<span style="border: ${mark.thickness}px solid;">${content}</span>`
@@ -23,14 +23,14 @@ const highlight = ({mark, children}) => {
 
 const testsDir = path.dirname(require.resolve('@sanity/block-content-tests'))
 const fixturesDir = path.join(testsDir, 'fixtures')
-const fixtures = fs.readdirSync(fixturesDir).filter((file) => path.extname(file) === '.js')
+const fixtures = fs.readdirSync(fixturesDir).filter(file => path.extname(file) === '.js')
 const options = {
   projectId: '3do82whm',
   dataset: 'production',
-  serializers: {types: {code}, marks: {highlight}},
+  serializers: {types: {code}, marks: {highlight}}
 }
 
-fixtures.forEach((fixture) => {
+fixtures.forEach(fixture => {
   const {input} = require(path.join(fixturesDir, fixture))
   test(fixture.slice(0, -3), () => {
     expect(toMarkdown(input, options)).toMatchSnapshot()
@@ -51,30 +51,30 @@ function getMarkedInput(mark, text = '   Sanity   ') {
         {
           _type: 'span',
           marks: [],
-          text: 'before',
+          text: 'before'
         },
         {
           _type: 'span',
           marks: [mark],
-          text: text,
+          text: text
         },
         {
           _type: 'span',
           marks: [],
-          text: 'after',
-        },
+          text: 'after'
+        }
       ],
-      markDefs: [],
-    },
+      markDefs: []
+    }
   ]
 }
 
-;['strike-through', 'em', 'code', 'strong'].forEach((mark) => {
+;['strike-through', 'em', 'code', 'strong'].forEach(mark => {
   test(`places ${mark} symbols appropriately with respect to whitespace`, () => {
     expect(toMarkdown(getMarkedInput(mark), options)).toMatchSnapshot()
   })
 })
-;['strike-through', 'em', 'strong'].forEach((mark) => {
+;['strike-through', 'em', 'strong'].forEach(mark => {
   it(`does not include ${mark} symbols around empty content`, () => {
     expect(toMarkdown(getMarkedInput(mark, ' '))).toMatchSnapshot()
   })
@@ -88,21 +88,21 @@ test('places nested marks appropriately with respect to whitespace', () => {
         {
           _type: 'span',
           text: '  before',
-          marks: ['strike-through'],
+          marks: ['strike-through']
         },
         {
           _type: 'span',
           marks: ['em', 'strike-through', 'strong'],
 
-          text: '   Sanity   ',
+          text: '   Sanity   '
         },
         {
           _type: 'span',
-          text: 'after  ',
-        },
+          text: 'after  '
+        }
       ],
-      markDefs: [],
-    },
+      markDefs: []
+    }
   ]
 
   expect(toMarkdown(input, options)).toMatchSnapshot()
@@ -116,38 +116,38 @@ function getSplitEmptyMarkInput(mark, emptyMarks) {
         {
           _type: 'span',
           marks: [mark],
-          text: 'before',
+          text: 'before'
         },
         {
           _type: 'span',
           marks: emptyMarks,
-          text: '',
+          text: ''
         },
         {
           _type: 'span',
           marks: [mark],
-          text: 'after',
-        },
+          text: 'after'
+        }
       ],
-      markDefs: [],
-    },
+      markDefs: []
+    }
   ]
 }
 
-;['strike-through', 'em', 'strong', 'underline'].forEach((emptyMark) => {
-  ;['strike-through', 'em', 'code', 'strong'].forEach((mark) => {
+;['strike-through', 'em', 'strong', 'underline'].forEach(emptyMark => {
+  ;['strike-through', 'em', 'code', 'strong'].forEach(mark => {
     test(`sanitizes empty ${emptyMark} blocks to prevent malformed ${mark} syntax`, () => {
       expect(toMarkdown(getSplitEmptyMarkInput(mark, [emptyMark]), options)).toMatchSnapshot()
     })
   })
 })
-;['strike-through', 'em', 'strong', 'underline'].forEach((mark) => {
+;['strike-through', 'em', 'strong', 'underline'].forEach(mark => {
   test(`allows empty code marks between ${mark} marks`, () => {
     expect(toMarkdown(getSplitEmptyMarkInput(mark, ['code']), options)).toMatchSnapshot()
   })
 })
-;['strike-through', 'em', 'strong', 'underline'].forEach((emptyMark) => {
-  ;['strike-through', 'em', 'strong', 'underline'].forEach((mark) => {
+;['strike-through', 'em', 'strong', 'underline'].forEach(emptyMark => {
+  ;['strike-through', 'em', 'strong', 'underline'].forEach(mark => {
     test(`after sanitiziation - allows empty code marks between ${mark} marks`, () => {
       expect(
         toMarkdown(getSplitEmptyMarkInput(mark, ['code', emptyMark]), options)

@@ -76,7 +76,7 @@ function hardBreak() {
 module.exports = {
   types: {
     block,
-    image,
+    image
   },
 
   marks: {
@@ -85,12 +85,12 @@ module.exports = {
     code: RawMarkSerializer.bind(null, '`', false),
     strong: RawMarkSerializer.bind(null, '**', true),
     underline: renderChildren,
-    link,
+    link
   },
 
   list,
   listItem,
   container,
   hardBreak,
-  markFallback: renderChildren,
+  markFallback: renderChildren
 }
