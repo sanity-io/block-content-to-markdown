@@ -1,7 +1,7 @@
 {
   "name": "@sanity/block-content-to-markdown",
   "description": "Transforming Sanity block content to markdown",
-  "version": "0.0.6",
+  "version": "1.0.0",
   "main": "lib/toMarkdown.js",
   "umd": "umd/toMarkdown.min.js",
   "unpkg": "umd/toMarkdown.min.js",
