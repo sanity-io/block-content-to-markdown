@@ -26,11 +26,11 @@ const sanitizeEmptyMarkedSpans = (blocks = []) => {
 
       if (allowedEmptyMarks.length == 0) {
         return null
-      } else {
-        return Object.assign({}, block, {
-          marks: allowedEmptyMarks
-        })
       }
+
+      return Object.assign({}, block, {
+        marks: allowedEmptyMarks
+      })
     }
 
     return block
