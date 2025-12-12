@@ -1,5 +1,8 @@
 # block-content-to-markdown
 
+> [!CAUTION]
+> This module is deprecated and no longer maintained - see [@portabletext/markdown](https://www.npmjs.com/package/@portabletext/markdown) for a modern replacement.
+
 Render an array of [block text](https://www.sanity.io/docs/schema-types/block-type) from Sanity to markdown.
 
 ## Installing
